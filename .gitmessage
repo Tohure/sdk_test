@@ -1,0 +1,15 @@
+tipo(ambito): asunto
+
+descripción
+
+pie
+
+# Tipos
+# -feat : nueva características
+# -fix : corrección de error
+# -docs : documentación
+# -refactor : mejoras de código sin alterar funcionalidades
+# -style : formato de código, tabspace, etc
+# -test : añadir funciones de prueba en la suit de pruebas
+# -chore : cambios en el uso de herramientas, librerías, etc
+#

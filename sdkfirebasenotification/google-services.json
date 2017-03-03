@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "995158750717",
+    "firebase_url": "https://testsdk-f1876.firebaseio.com",
+    "project_id": "testsdk-f1876",
+    "storage_bucket": "testsdk-f1876.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995158750717:android:f05207d763a4c26f",
+        "android_client_info": {
+          "package_name": "com.gec.sdkfirebasenotification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995158750717-6r8t8gn6n0p0muqde5tbrl7p8uotf4r8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1IGUePklAcqXkFUpvLTgCWEi2ypqXmPs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

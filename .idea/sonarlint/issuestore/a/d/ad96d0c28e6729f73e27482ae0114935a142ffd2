@@ -1,0 +1,5 @@
+
+usquid:S3008"[Rename this field "TOKEN_PREFERENCE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠòÔÔüÿÿÿÿ
+Tsquid:S1118":Add a private constructor to hide the implicit public one.(ì½ğÿÿÿÿÿ
+Qsquid:UnusedPrivateMethod".Remove this unused private "getEditor" method.(‹ëò
+jsquid:S3008"PRename this field "TOKEN" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰ıÿ–ıÿÿÿÿ

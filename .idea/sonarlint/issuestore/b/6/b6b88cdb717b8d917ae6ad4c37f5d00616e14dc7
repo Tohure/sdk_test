@@ -1,0 +1,13 @@
+
+psquid:S3008"ORename this field "PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úÅäßúÿÿÿÿ8‰­®©+
+€squid:UselessImportCheck"RRemove this unused import 'com.gec.sdktestnotification.rest.models.TokenResponse'.(ó ğÄÿÿÿÿÿ8‰­®©+
+[squid:UselessImportCheck"-Remove this unused import 'okhttp3.Response'.(Ï‚ñ—øÿÿÿÿ8äÃŞ®©+
+Ysquid:UselessImportCheck"0Remove this unused import 'okhttp3.Interceptor'.(ËÖ‹ã8äÃŞ®©+
+psquid:S3008"VRename this field "VERSION_API" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö©„›ùÿÿÿÿ
+Zsquid:UselessImportCheck",Remove this unused import 'okhttp3.Request'.(¬ßØÿÿÿÿÿ8äÃŞ®©+
+^squid:UselessImportCheck"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8äÃŞ®©+
+Zsquid:UselessImportCheck"1Remove this unused import 'okhttp3.ResponseBody'.(Õ«ø8äÃŞ®©+
+Lsquid:S1313"2Make this IP "172.18.60.113" address configurable.(µ”ÀËıÿÿÿÿ
+Bsquid:S1068"'Remove this unused "TAG" private field.(ºÁÿ78äÃŞ®©+
+[squid:UselessImportCheck"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8äÃŞ®©+
+ksquid:S3008"QRename this field "DOMAIN" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ”ÀËıÿÿÿÿ

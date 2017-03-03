@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/tohure/Documentos/Android.Projects/SDKTestNotification/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1a02ddf92b5d30571004410470d95c8173067563">
+        <dex dex="/home/tohure/Documentos/Android.Projects/SDKTestNotification/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5d54fa3f6fd6bdc448cc74d2991ad65e86b431df/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/tohure/Documentos/Android.Projects/SDKTestNotification/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/home/tohure/Documentos/Android.Projects/SDKTestNotification/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_c8145a2470ea1c5bb0f4741f8bf231ca7de195e6/classes.dex" />
+    </item>
+
+</items>

@@ -1,0 +1,5 @@
+
+Vsquid:S1118":Add a private constructor to hide the implicit public one.(ßÍïƒ8¬¸¼Š©+
+Xsquid:UnusedPrivateMethod".Remove this unused private "getEditor" method.(‹ëžò8´‰¥‰©+
+qsquid:S3008"PRename this field "TOKEN" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰ýÿ–ýÿÿÿÿ8Ìã¤‡©+
+|squid:S3008"[Rename this field "TOKEN_PREFERENCE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÝ¼„ýÿÿÿÿ8Ìã¤‡©+
