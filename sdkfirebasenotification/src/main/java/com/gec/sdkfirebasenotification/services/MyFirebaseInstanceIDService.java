@@ -2,11 +2,11 @@ package com.gec.sdkfirebasenotification.services;
 
 import android.util.Log;
 
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.FirebaseInstanceIdService;
 import com.gec.sdkfirebasenotification.rest.ApiClient;
 import com.gec.sdkfirebasenotification.rest.models.TokenRaw;
 import com.gec.sdkfirebasenotification.rest.models.TokenResponse;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.FirebaseInstanceIdService;
 
 import retrofit2.Call;
 import retrofit2.Callback;

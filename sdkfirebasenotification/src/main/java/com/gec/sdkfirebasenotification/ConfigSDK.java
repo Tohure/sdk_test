@@ -3,12 +3,11 @@ package com.gec.sdkfirebasenotification;
 import android.content.Context;
 import android.util.Log;
 
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.iid.FirebaseInstanceId;
 import com.gec.sdkfirebasenotification.rest.ApiClient;
 import com.gec.sdkfirebasenotification.rest.models.TokenRaw;
 import com.gec.sdkfirebasenotification.rest.models.TokenResponse;
 import com.gec.sdkfirebasenotification.utils.SettingsSDK;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import java.io.IOException;
 
