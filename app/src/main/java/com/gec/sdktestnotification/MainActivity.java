@@ -8,8 +8,6 @@ import com.gec.sdkfirebasenotification.ConfigSDK;
 import com.gec.sdkfirebasenotification.rest.ApiClient;
 import com.gec.sdkfirebasenotification.rest.models.TokenRaw;
 import com.gec.sdkfirebasenotification.rest.models.TokenResponse;
-import com.gec.sdktestnotification.utils.Settings;
-import com.google.firebase.iid.FirebaseInstanceId;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -20,26 +18,19 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        ConfigSDK.initSDK(this);
-        ConfigSDK.configNotifications(true);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        fireBaseConf();
-    }
-
-    private void fireBaseConf() {
-        String token = FirebaseInstanceId.getInstance().getToken();
-        Settings.saveToken(this,token);
-        sendToServer(token);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        ConfigSDK.initSDK(this);
+        ConfigSDK.configNotifications(true);
         Log.d("thr", "Token SDK: "+ConfigSDK.getToken());
     }
 

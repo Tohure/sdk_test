@@ -1,3 +1,4 @@
 
-gsquid:S1132"FMove the "" string literal on the left side of this string comparison.(Ö”…Ñüÿÿÿÿ8×ó°¯©+
+`squid:UnusedPrivateMethod"1Remove this unused private "sendToServer" method.(ÏÇ•Ýûÿÿÿÿ8•ßž´©+
+Csquid:S1185"(Remove this method to simply inherit it.(ºŠñ=8»¢¢´©+
 jsquid:MaximumInheritanceDepth"<This class has 8 parents which is greater than 5 authorized.(²Ú±Ž8ÖãõÜ¨+

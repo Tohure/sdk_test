@@ -25,8 +25,6 @@ dsdkfirebasenotification/src/main/java/com/gec/sdkfirebasenotification/rest/mode
 \sdkfirebasenotification/src/main/java/com/gec/sdkfirebasenotification/utils/SettingsSDK.java,7/4/74c91aab033a6663adb0c6ffe65dc40acbb0ddfd
 q
 Aapp/src/main/java/com/gec/sdktestnotification/utils/Settings.java,a/d/ad96d0c28e6729f73e27482ae0114935a142ffd2
-~
-Napp/src/main/java/com/gec/sdktestnotification/servicios/InstanceIDService.java,3/d/3de8f7ca19cc5e3f825c8ed739d667bc2d42e4ee
 „
 Tsdkfirebasenotification/src/main/java/com/gec/sdkfirebasenotification/ConfigSDK.java,e/5/e55c9d85b088a2c6903ea6521167131b7c4233bc
 c
@@ -59,7 +57,5 @@ osdkfirebasenotification/src/main/java/com/gec/sdkfirebasenotification/services/
 nsdkfirebasenotification/src/main/java/com/gec/sdkfirebasenotification/services/MyFirebaseMessagingService.java,0/2/02cb237d249466fff528010c6c1231c0f13f1aed
 o
 ?app/src/main/java/com/gec/sdktestnotification/MainActivity.java,f/2/f259186ae446e2b67ab669ed5dfe0aed0c9f2c6e
-}
-Mapp/src/main/java/com/gec/sdktestnotification/servicios/MessagingService.java,7/d/7d8d2b3d7256106e0cacfcc6db61817311862a36
 H
 app/google-services.json,f/d/fd8d34b142d02ec743a8efefefd2c097961666e9
