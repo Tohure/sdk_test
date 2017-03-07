@@ -27,13 +27,15 @@ public class ConfigSDK {
     private ConfigSDK() { }
 
     public static void initSDK(Context applicationContext){
+        FirebaseInstanceId.getInstance();
         context = applicationContext;
     }
 
     public static void configNotifications(boolean b) {
+        String token;
+
         if (b){
-            String token = FirebaseInstanceId.getInstance().getToken();
-            SettingsSDK.saveToken(context,token);
+            token = FirebaseInstanceId.getInstance().getToken();
             sendToServer(token);
         }else{
             try {
@@ -41,14 +43,11 @@ public class ConfigSDK {
             } catch (IOException e) {
                 Log.e("thr", "configNotifications: "+ e.getMessage());
             }
-            SettingsSDK.saveToken(context,"");
+            token = "";
         }
-    }
 
-    public static String getToken() {
-        return FirebaseInstanceId.getInstance().getToken();
+        SettingsSDK.saveToken(context,token);
     }
-
 
     private static void sendToServer(String token) {
 

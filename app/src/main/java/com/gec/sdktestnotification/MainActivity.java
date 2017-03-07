@@ -18,17 +18,12 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
 
     @Override
-    protected void onStart() {
-        super.onStart();
-        ConfigSDK.initSDK(this);
-        ConfigSDK.configNotifications(true);
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         fireBaseConf();
+        ConfigSDK.initSDK(this);
+        ConfigSDK.configNotifications(true);
     }
 
     private void fireBaseConf() {
@@ -37,16 +32,9 @@ public class MainActivity extends AppCompatActivity {
         sendToServer(token);
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.d("thr", "Token SDK: "+ConfigSDK.getToken());
-    }
-
-
     private void sendToServer(String token) {
 
-        if (token != null && token != ""){
+        if (token != null && !token.equals("")){
             TokenRaw tokenRaw = new TokenRaw();
             tokenRaw.setName("Motorola");
             tokenRaw.setOs("Android");

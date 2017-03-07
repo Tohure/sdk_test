@@ -30,7 +30,7 @@ public class InstanceIDService extends FirebaseInstanceIdService {
 
     private void sendRegistrationToServer(String refreshedToken) {
 
-        if (refreshedToken != null && refreshedToken != ""){
+        if (refreshedToken != null && !refreshedToken.equals("")){
             TokenRaw tokenRaw = new TokenRaw();
             tokenRaw.setName("Motorola");
             tokenRaw.setOs("Android");
