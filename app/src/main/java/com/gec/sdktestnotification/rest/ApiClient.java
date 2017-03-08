@@ -1,16 +1,6 @@
 package com.gec.sdktestnotification.rest;
 
-import android.util.Log;
-
-import com.gec.sdktestnotification.rest.models.TokenResponse;
-
-import java.io.IOException;
-
-import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-import okhttp3.ResponseBody;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Retrofit;
