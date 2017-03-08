@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="42ddbc851eb975eb77a85c64b457d7bda53f32ff">
+        sha1="a5e131b4127f1c0f3dc11dd88b35cfbd3658671f">
         <dex dex="/home/tohure/Documentos/Android.Projects/SDKTestNotification/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5d54fa3f6fd6bdc448cc74d2991ad65e86b431df/classes.dex" />
     </item>
     <item

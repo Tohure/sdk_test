@@ -22,8 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         fireBaseConf();
-        ConfigSDK.initSDK(this);
-        ConfigSDK.configNotifications(true);
+        ConfigSDK.initSDK(this).sKey("").configNotifications(true);
     }
 
     private void fireBaseConf() {

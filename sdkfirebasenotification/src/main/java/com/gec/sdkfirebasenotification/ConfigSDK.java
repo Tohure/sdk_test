@@ -1,6 +1,7 @@
 package com.gec.sdkfirebasenotification;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.gec.sdkfirebasenotification.rest.ApiClient;
@@ -22,35 +23,64 @@ import retrofit2.Response;
 public class ConfigSDK {
 
     private static Context context;
+    private static volatile ConfigSDK singleton = null;
 
-    private ConfigSDK() { }
-
-    public static void initSDK(Context applicationContext){
-        FirebaseInstanceId.getInstance();
+    public ConfigSDK(Context applicationContext) {
         context = applicationContext;
     }
 
-    public static void configNotifications(boolean b) {
+    public static ConfigSDK initSDK(@NonNull Context applicationContext) {
+        FirebaseInstanceId.getInstance();
+
+        if (applicationContext == null) {
+            throw new IllegalArgumentException("context == null");
+        }
+
+        if (singleton == null) {
+            synchronized (ConfigSDK.class) {
+                if (singleton == null) {
+                    singleton = new ConfigSDK(applicationContext);
+                }
+            }
+        }
+
+        return singleton;
+    }
+
+
+    public ConfigSDK sKey(String serverkey) {
+
+        if (serverkey.trim().equals("")) {
+            throw new IllegalArgumentException("sKey == null");
+        } else {
+            SettingsSDK.saveServerKey(context, serverkey);
+            return singleton;
+        }
+
+    }
+
+
+    public void configNotifications(boolean b) {
         String token;
 
-        if (b){
+        if (b) {
             token = FirebaseInstanceId.getInstance().getToken();
             sendToServer(token);
-        }else{
+        } else {
             try {
                 FirebaseInstanceId.getInstance().deleteInstanceId();
             } catch (IOException e) {
-                Log.e("thr", "configNotifications: "+ e.getMessage());
+                Log.e("thr", "configNotifications: " + e.getMessage());
             }
             token = "";
         }
 
-        SettingsSDK.saveToken(context,token);
+        SettingsSDK.saveToken(context, token);
     }
 
     private static void sendToServer(String token) {
 
-        if (token != null && !token.equals("")){
+        if (token != null && !token.equals("")) {
             TokenRaw tokenRaw = new TokenRaw();
             tokenRaw.setName("ADV");
             tokenRaw.setOs("Android");
@@ -66,7 +96,7 @@ public class ConfigSDK {
                         TokenResponse tokenResponse = response.body();
                         String message = tokenResponse.getMessage();
 
-                        Log.i("thr", "token creado sdk | "+message);
+                        Log.i("thr", "token creado sdk | " + message);
                     } else {
                         Log.i("thr", "fallo al crear token sdk 1");
                     }
