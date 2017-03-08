@@ -1,0 +1,6 @@
+
+ksquid:S3008"QRename this field "DOMAIN" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ”ÀËýÿÿÿÿ
+psquid:S3008"VRename this field "VERSION_API" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö©„›ùÿÿÿÿ
+isquid:S3008"ORename this field "PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úÅäßúÿÿÿÿ
+;squid:S1068"'Remove this unused "TAG" private field.(ºÁÿ7
+Lsquid:S1313"2Make this IP "172.18.60.113" address configurable.(µ”ÀËýÿÿÿÿ
