@@ -113,7 +113,7 @@ public class ConfigSDK {
 
             String token = "";
             try {
-                String authorizedEntity = "testsdk-f1876";
+                String authorizedEntity = "995158750717";
                 String scope = FirebaseMessaging.INSTANCE_ID_SCOPE;
                 token = FirebaseInstanceId.getInstance().getToken(authorizedEntity, scope);
             } catch (IOException e) {

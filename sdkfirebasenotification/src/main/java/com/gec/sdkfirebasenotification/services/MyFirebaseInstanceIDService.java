@@ -28,7 +28,7 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
         super.onTokenRefresh();
         // Get updated InstanceID token.
         //String refreshedToken = FirebaseInstanceId.getInstance().getToken();
-        String authorizedEntity = "testsdk-f1876";
+        String authorizedEntity = "995158750717";
         String scope = FirebaseMessaging.INSTANCE_ID_SCOPE;
         String refreshedToken = "";
         try {
