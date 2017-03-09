@@ -5,9 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.gec.sdkfirebasenotification.ConfigSDK;
-import com.gec.sdkfirebasenotification.rest.ApiClient;
-import com.gec.sdkfirebasenotification.rest.models.TokenRaw;
-import com.gec.sdkfirebasenotification.rest.models.TokenResponse;
+import com.gec.sdktestnotification.rest.ApiClient;
+import com.gec.sdktestnotification.rest.models.TokenRaw;
+import com.gec.sdktestnotification.rest.models.TokenResponse;
 import com.gec.sdktestnotification.utils.Settings;
 import com.google.firebase.iid.FirebaseInstanceId;
 

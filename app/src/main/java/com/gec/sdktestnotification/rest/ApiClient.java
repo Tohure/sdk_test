@@ -1,5 +1,7 @@
 package com.gec.sdktestnotification.rest;
 
+import com.gec.sdktestnotification.rest.models.TokenResponse;
+
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
@@ -24,14 +26,14 @@ public class ApiClient {
     private static final String TAG = "ApiClient";
     private static Retrofit retrofit;
 
-    public static com.gec.sdkfirebasenotification.rest.ApiClient.ApiInterface getInterface() {
+    public static ApiInterface getInterface() {
         retrofit = new Retrofit.Builder()
                 .baseUrl(PATH)
                 .client(getClientInterceptor())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        return retrofit.create(com.gec.sdkfirebasenotification.rest.ApiClient.ApiInterface.class);
+        return retrofit.create(ApiClient.ApiInterface.class);
     }
 
     public static  Retrofit getRetrofit(){
@@ -42,13 +44,13 @@ public class ApiClient {
     public interface ApiInterface {
 
         @POST("device")
-        Call<com.gec.sdkfirebasenotification.rest.models.TokenResponse> sendToken(@Body Object raw);
+        Call<TokenResponse> sendToken(@Body Object raw);
 
         @PUT("device/{id}")
-        Call<com.gec.sdkfirebasenotification.rest.models.TokenResponse> updateToken(@Body Object raw, @Path("id") int id);
+        Call<TokenResponse> updateToken(@Body Object raw, @Path("id") int id);
 
         @DELETE("device")
-        Call<com.gec.sdkfirebasenotification.rest.models.TokenResponse> deleteToken(@Body Object raw);
+        Call<TokenResponse> deleteToken(@Body Object raw);
     }
 
     public static OkHttpClient getClientInterceptor() {
