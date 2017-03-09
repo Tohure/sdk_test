@@ -7,6 +7,9 @@ import com.gec.sdkfirebasenotification.rest.models.TokenRaw;
 import com.gec.sdkfirebasenotification.rest.models.TokenResponse;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
+import com.google.firebase.messaging.FirebaseMessaging;
+
+import java.io.IOException;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -24,7 +27,15 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
     public void onTokenRefresh() {
         super.onTokenRefresh();
         // Get updated InstanceID token.
-        String refreshedToken = FirebaseInstanceId.getInstance().getToken();
+        //String refreshedToken = FirebaseInstanceId.getInstance().getToken();
+        String authorizedEntity = "testsdk-f1876";
+        String scope = FirebaseMessaging.INSTANCE_ID_SCOPE;
+        String refreshedToken = "";
+        try {
+            refreshedToken = FirebaseInstanceId.getInstance().getToken(authorizedEntity, scope);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         sendRegistrationToServer(refreshedToken);
     }
 
@@ -57,6 +68,6 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
             });
         }
 
-
     }
+
 }

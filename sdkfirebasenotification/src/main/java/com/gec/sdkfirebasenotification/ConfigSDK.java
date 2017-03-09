@@ -1,6 +1,7 @@
 package com.gec.sdkfirebasenotification;
 
 import android.content.Context;
+import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
@@ -9,6 +10,7 @@ import com.gec.sdkfirebasenotification.rest.models.TokenRaw;
 import com.gec.sdkfirebasenotification.rest.models.TokenResponse;
 import com.gec.sdkfirebasenotification.utils.SettingsSDK;
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.io.IOException;
 
@@ -30,7 +32,6 @@ public class ConfigSDK {
     }
 
     public static ConfigSDK initSDK(@NonNull Context applicationContext) {
-        FirebaseInstanceId.getInstance();
 
         if (applicationContext == null) {
             throw new IllegalArgumentException("context == null");
@@ -59,24 +60,20 @@ public class ConfigSDK {
 
     }
 
-
     public void configNotifications(boolean b) {
-        String token;
 
         if (b) {
             SettingsSDK.saveNotification(context,true);
-            token = FirebaseInstanceId.getInstance().getToken();
-            sendToServer(token);
+            new FCMTokenTask().execute();
+            //token = FirebaseInstanceId.getInstance().getToken();
+            //sendToServer(token);
         } else {
-            //FirebaseInstanceId.getInstance().deleteInstanceId();
-            token = "";
+            SettingsSDK.saveToken(context, "");
             SettingsSDK.saveNotification(context,false);
         }
-
-        SettingsSDK.saveToken(context, token);
     }
 
-    private static void sendToServer(String token) {
+    private static void sendToServer(final String token) {
 
         if (token != null && !token.equals("")) {
             TokenRaw tokenRaw = new TokenRaw();
@@ -93,7 +90,7 @@ public class ConfigSDK {
                     if (response.isSuccessful()) {
                         TokenResponse tokenResponse = response.body();
                         String message = tokenResponse.getMessage();
-
+                        SettingsSDK.saveToken(context, token);
                         Log.i("thr", "token creado sdk | " + message);
                     } else {
                         Log.i("thr", "fallo al crear token sdk 1");
@@ -108,4 +105,29 @@ public class ConfigSDK {
         }
 
     }
+
+    private class FCMTokenTask extends AsyncTask<Void, Void, String> {
+
+        @Override
+        protected String doInBackground(Void... params) {
+
+            String token = "";
+            try {
+                String authorizedEntity = "testsdk-f1876";
+                String scope = FirebaseMessaging.INSTANCE_ID_SCOPE;
+                token = FirebaseInstanceId.getInstance().getToken(authorizedEntity, scope);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            return token;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            sendToServer(s);
+        }
+    }
+
 }
