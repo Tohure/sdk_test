@@ -15,6 +15,7 @@ public class SettingsSDK {
     protected static String TOKEN_PREFERENCE = "com.tohure.sdkfirebasenotification.utils.etoken";
     protected static String TOKEN = TOKEN_PREFERENCE + ".token";
     protected static String SERVERKEY = TOKEN_PREFERENCE + ".serverKey";
+    protected static String NOTIFICATIONS = TOKEN_PREFERENCE + ".notifications";
 
     protected static SharedPreferences mSettings;
     protected static SharedPreferences.Editor mEditor;
@@ -39,6 +40,16 @@ public class SettingsSDK {
     }
 
 
+    //State Notifications
+    public static void saveNotification(Context context, Boolean state){
+        mEditorToken = getEditorToken(context);
+        mEditorToken.putBoolean(NOTIFICATIONS, state);
+        mEditorToken.commit();
+    }
+
+    public static Boolean getNotification(Context context){
+        return getSharedPreferencesToken(context).getBoolean(NOTIFICATIONS, false);
+    }
 
     //Save Token
     public static void saveToken(Context context, String token){

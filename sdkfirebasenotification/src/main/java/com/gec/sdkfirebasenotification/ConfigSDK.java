@@ -67,12 +67,9 @@ public class ConfigSDK {
             token = FirebaseInstanceId.getInstance().getToken();
             sendToServer(token);
         } else {
-            try {
-                FirebaseInstanceId.getInstance().deleteInstanceId();
-            } catch (IOException e) {
-                Log.e("thr", "configNotifications: " + e.getMessage());
-            }
+            //FirebaseInstanceId.getInstance().deleteInstanceId();
             token = "";
+            SettingsSDK.saveNotification(context,false);
         }
 
         SettingsSDK.saveToken(context, token);

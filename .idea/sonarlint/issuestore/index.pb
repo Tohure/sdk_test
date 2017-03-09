@@ -37,3 +37,5 @@ Tsdkfirebasenotification/src/main/java/com/gec/sdkfirebasenotification/ConfigSDK
 nsdkfirebasenotification/src/main/java/com/gec/sdkfirebasenotification/services/MyFirebaseMessagingService.java,0/2/02cb237d249466fff528010c6c1231c0f13f1aed
 o
 ?app/src/main/java/com/gec/sdktestnotification/MainActivity.java,f/2/f259186ae446e2b67ab669ed5dfe0aed0c9f2c6e
+P
+ app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e

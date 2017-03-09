@@ -7,6 +7,7 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.gec.sdkfirebasenotification.R;
+import com.gec.sdkfirebasenotification.utils.SettingsSDK;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -19,12 +20,13 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
-        Log.d("thr sdk", "onMessageReceived: "+remoteMessage.getData().toString());
-        String title = remoteMessage.getData().get("title");
-        String message = remoteMessage.getData().get("message");
-        int id = Math.abs(remoteMessage.getMessageId().hashCode());
-
-        sendNotification(id, title, message);
+        if (SettingsSDK.getNotification(getApplicationContext())){
+            Log.d("thr sdk", "onMessageReceived: "+remoteMessage.getData().toString());
+            String title = remoteMessage.getData().get("title");
+            String message = remoteMessage.getData().get("message");
+            int id = Math.abs(remoteMessage.getMessageId().hashCode());
+            sendNotification(id, title, message);
+        }
     }
 
     private void sendNotification(int i, String title, String message) {
