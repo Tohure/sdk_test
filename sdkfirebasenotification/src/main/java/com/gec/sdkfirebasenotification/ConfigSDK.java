@@ -64,6 +64,7 @@ public class ConfigSDK {
         String token;
 
         if (b) {
+            SettingsSDK.saveNotification(context,true);
             token = FirebaseInstanceId.getInstance().getToken();
             sendToServer(token);
         } else {
