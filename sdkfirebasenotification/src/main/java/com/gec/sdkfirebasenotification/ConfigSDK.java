@@ -1,8 +1,12 @@
 package com.gec.sdkfirebasenotification;
 
+import android.app.Notification;
+import android.app.NotificationManager;
 import android.content.Context;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.gec.sdkfirebasenotification.rest.ApiClient;
@@ -11,12 +15,15 @@ import com.gec.sdkfirebasenotification.rest.models.TokenResponse;
 import com.gec.sdkfirebasenotification.utils.SettingsSDK;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.google.firebase.messaging.RemoteMessage;
 
 import java.io.IOException;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+import static android.content.Context.NOTIFICATION_SERVICE;
 
 /**
  * Created by tohure on 01/03/17.
@@ -48,6 +55,30 @@ public class ConfigSDK {
         return singleton;
     }
 
+    public void showSDKnotification(RemoteMessage remoteMessage) {
+
+        String title = remoteMessage.getData().get("title");
+        String message = remoteMessage.getData().get("message");
+        int id = Math.abs(remoteMessage.getMessageId().hashCode());
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
+                .setAutoCancel(true)
+                .setContentTitle(title)
+                .setContentText(message)
+                .setStyle(new NotificationCompat.BigTextStyle()
+                        .bigText(message))
+                .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.drawable.ic_test_notification))
+                .setSmallIcon(R.drawable.ic_test_push);
+
+        int defaults = 0;
+        defaults = defaults | Notification.DEFAULT_LIGHTS;
+        defaults = defaults | Notification.DEFAULT_VIBRATE;
+
+        builder.setDefaults(defaults);
+
+        NotificationManager manager = (NotificationManager) context.getSystemService(NOTIFICATION_SERVICE);
+        manager.notify("SDK Test", id, builder.build());
+    }
 
     public ConfigSDK sKey(String serverkey) {
 

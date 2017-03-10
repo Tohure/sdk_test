@@ -3,6 +3,8 @@ package com.gec.sdktestnotification;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.gec.sdkfirebasenotification.ConfigSDK;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

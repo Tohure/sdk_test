@@ -1,4 +1,7 @@
 
-gsquid:S1132"FMove the "" string literal on the left side of this string comparison.(å€¬´ûÿÿÿÿ8±úô›«+
-gsquid:S1132"FMove the "" string literal on the left side of this string comparison.(ŠÎ¬ðøÿÿÿÿ8±úô›«+
-Asquid:S1166"%Either log or rethrow this exception.(ï­£Ä8±úô›«+
+gsquid:S1132"FMove the "" string literal on the left side of this string comparison.(ŠÎ¬ðøÿÿÿÿ8ðú´©«+
+gsquid:S1132"FMove the "" string literal on the left side of this string comparison.(å€¬´ûÿÿÿÿ8ðú´©«+
+Asquid:S1166"%Either log or rethrow this exception.(ï­£Ä8²éÐ©«+
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(î‘©õ8¤Ãƒª«+
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8²éÐ©«+
+Asquid:S3398"%Move this method into "FCMTokenTask".(¶»áÿ8É¤–ª«+

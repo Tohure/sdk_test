@@ -11,14 +11,10 @@ Qapp/src/androidTest/java/com/gec/sdktestnotification/ExampleInstrumentedTest.ja
 Ysdkfirebasenotification/src/main/java/com/gec/sdkfirebasenotification/rest/ApiClient.java,d/5/d5d03cb76ba08bfc7fe67bfed2c2059954f258a5
 Ÿ
 osdkfirebasenotification/src/main/java/com/gec/sdkfirebasenotification/services/MyFirebaseInstanceIDService.java,c/9/c98742c1beee0f9cf1d17feeed69d45436527e6c
-q
-Aapp/src/main/java/com/gec/sdktestnotification/rest/ApiClient.java,b/6/b6b88cdb717b8d917ae6ad4c37f5d00616e14dc7
 r
 Bapp/src/test/java/com/gec/sdktestnotification/ExampleUnitTest.java,a/d/ad83654cde065d0f859f2a70bfddaf506c9d60f3
 Š
 Zsdkfirebasenotification/src/test/java/com/gec/sdkfirebasenotification/ExampleUnitTest.java,1/4/14484c17809286403412827c986b7d3dfe9826a8
-~
-Napp/src/main/java/com/gec/sdktestnotification/servicios/InstanceIDService.java,3/d/3de8f7ca19cc5e3f825c8ed739d667bc2d42e4ee
 T
 $sdkfirebasenotification/build.gradle,4/0/4007af1319cb5e77d49d69adde3cc294dacdfb88
 @
@@ -39,3 +35,5 @@ o
 ?app/src/main/java/com/gec/sdktestnotification/MainActivity.java,f/2/f259186ae446e2b67ab669ed5dfe0aed0c9f2c6e
 P
  app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
+d
+4sdkfirebasenotification/src/main/AndroidManifest.xml,9/1/91492692387d87d11aa1c3b73b5878e4c771cf59

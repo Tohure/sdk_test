@@ -1,3 +1,6 @@
 
-Asquid:S1068"'Remove this unused "TAG" private field.(˜¢¶ùÿÿÿÿ
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ö¨£ª«+
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(½ñ õ8ÚÃŸª«+
 bsquid:S1132"FMove the "" string literal on the left side of this string comparison.(ŸéŒ®8«²ûª+
+Asquid:S1068"'Remove this unused "TAG" private field.(˜¢¶ùÿÿÿÿ
+Asquid:S1166"%Either log or rethrow this exception.(ï­£Ä8ö¨£ª«+
